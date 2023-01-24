@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
 
     if @entry.save
-      redirect_to new_entry_path
+      redirect_to "/entries"
     else
       render :new, status: :unprocessable_entity
     end

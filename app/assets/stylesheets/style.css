@@ -28,6 +28,40 @@ h1 {
   flex-direction: column;
 }
 
+.edit-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 32pt;
+}
+
+.new-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 32pt;
+}
+
 .entries .entry-title a {
   color: rgb(56, 56, 56);
+}
+
+.title-input input {
+  margin-top: 20px;
+  margin-left: 13px;
+  font-size: 32pt;
+}
+
+.body-input input {
+  margin-top: 20px;
+  font-size: 32pt
+}
+
+.submit input {
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-bottom: 20px;
+  font-size: 16pt;
 }
