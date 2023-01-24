@@ -1,10 +1,20 @@
+<div class="header-container">
 <h1>To Do</h1>
 <%= link_to "New Entry", "/entries/new" %>
+</div>
+
+
 <ul>
   <% @entries.each do |entry| %>
-    <h1>Entry <%= entry.id %>:</h1>
-    <h2><%= link_to entry.title, entry %><h2>
-    <h3><%= entry.body %><h3>
-    <h4><%= link_to "Edit", edit_entry_path(entry) %></h4>
+  <div class="list-container">
+  <div class="entries">
+    <h1 class="entry-title"><%= link_to entry.title, entry %><h1>
+    <h2 class="entry-body"><%= entry.body %><h2>
+    <h4><%= link_to "Edit", edit_entry_path(entry) %>       <%= link_to "Delete", entry_path(entry), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></h4>
+    </div>
+    </div>
   <% end %>
 </ul>

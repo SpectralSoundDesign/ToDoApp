@@ -35,6 +35,13 @@ class EntriesController < ApplicationController
     end
   end
 
+  def destroy
+    @entry = Entry.find(params[:id])
+    @entry.destroy
+
+    redirect_to entry_path, status: :see_other
+  end
+
   private
 
   def entry_params
